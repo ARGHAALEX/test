@@ -1,0 +1,114 @@
+@keyframes float {
+   0% {
+       transform: translateY(0);
+   }
+   50% {
+       transform: translateY(-20px);
+   }
+   100% {
+       transform: translateY(0);
+   }
+}
+
+@keyframes fadeIn {
+   from {
+       opacity: 0;
+   }
+   to {
+       opacity: 1;
+   }
+}
+
+body {
+   background-color: #f0f8ff;
+   font-family: Arial, sans-serif;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   margin: 0;
+}
+
+.container {
+   text-align: center;
+}
+
+.card {
+   background-color: #fff;
+   padding: 20px;
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+   color: #ff69b4;
+}
+
+.birthday-img {
+   width: 100%;
+   max-width: 300px;
+   border-radius: 10px;
+   margin: 20px 0;
+}
+
+.balloons {
+   display: flex;
+   justify-content: center;
+   margin: 20px 0;
+}
+
+.balloon {
+   width: 50px;
+   height: 70px;
+   border-radius: 50%;
+   margin: 0 10px;
+   position: relative;
+   animation: float 4s ease-in-out infinite;
+}
+
+.balloon:before {
+   content: '';
+   position: absolute;
+   bottom: -10px;
+   left: 50%;
+   width: 2px;
+   height: 20px;
+   background-color: #333;
+}
+
+.red {
+   background-color: #ff6347;
+}
+
+.blue {
+   background-color: #1e90ff;
+}
+
+.yellow {
+   background-color: #ffd700;
+}
+
+button {
+   background-color: #ff69b4;
+   color: white;
+   border: none;
+   padding: 10px 20px;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 16px;
+}
+
+button:hover {
+   background-color: #ff1493;
+}
+
+.hidden {
+   display: none;
+}
+
+#surpriseMessage {
+   margin-top: 20px;
+   font-size: 18px;
+   color: #ff4500;
+   animation: fadeIn 2s forwards;
+}
